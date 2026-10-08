@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker Kuliah</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+
+        <h1>Task Tracker Kuliah</h1>
+        <p class="subtitle">
+            Catat tugas kuliah agar tidak melewati deadline.
+        </p>
+
+        <form id="taskForm">
+
+            <div class="form-group">
+                <label for="judul">Judul Tugas</label>
+                <input
+                    type="text"
+                    id="judul"
+                    placeholder="Contoh: Laporan Praktikum"
+                >
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="matkul">Mata Kuliah</label>
+
+                    <select id="matkul">
+
+                        <option value="Pemrograman Web">
+                            Pemrograman Web
+                        </option>
+
+                        <option value="Komunikasi Data dan Jaringan Komputer">
+                            Komunikasi Data dan Jaringan Komputer
+                        </option>
+
+                        <option value="Keamanan Jaringan Komputer">
+                            Keamanan Jaringan Komputer
+                        </option>
+
+                        <option value="Komunikasi Profesional">
+                            Komunikasi Profesional
+                        </option>
+
+                        <option value="Internet of Things">
+                            Internet of Things
+                        </option>
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="deadline">Deadline</label>
+                    <input type="date" id="deadline">
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn-add">
+                Tambah Tugas
+            </button>
+
+            <p id="errorText" class="error-message"></p>
+
+        </form>
+
+        <section class="toolbar">
+
+            <div class="filters">
+
+                <button
+                    type="button"
+                    class="filter-btn on"
+                    data-filter="semua">
+                    Semua
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="aktif">
+                    Aktif
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="selesai">
+                    Selesai
+                </button>
+
+            </div>
+
+            <p id="counter">0 tugas aktif</p>
+
+        </section>
+
+        <ul id="taskList" class="task-list"></ul>
+
+    </main>
+
+</body>
+</html>
